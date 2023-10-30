@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define yes cout<<"YES"<<"\n"
+#define no cout<<"NO"<<"\n"
+#define next "\n"
+#define fori for(int i=0;i<n;i++)
+#define forj for(int j=0;j<n;j++)
+using ll = long long;
+typedef long long ll;
+const int N = (int)2e5+5;
+vector<int>v[1005];
+const int cnt = 0;
+
+void solve()
+{
+//the only time you should print YES is only when the given n is either 2,4 or a square of a number or n/2 is a square of a number. Else print NO.
+    int n;
+    cin>>n;
+    int z = n/2;
+    if(n%2){
+        no;
+    }
+    else{
+        int k = sqrt(z);
+        int s = sqrt(n);
+        if(k*k == z || s*s == n ||n==4 || n==2){
+            yes;
+        }
+        else{
+            no;
+        }
+    }
+
+
+}
+
+int32_t main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL), cout.tie(NULL);
+    int t = 1;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
