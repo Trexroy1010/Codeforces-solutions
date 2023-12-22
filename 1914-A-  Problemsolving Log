@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define yes cout<<"YES"<<"\n"
+#define no cout<<"NO"<<"\n"
+#define next "\n"
+#define fori for(int i=0;i<n;i++)
+#define forj for(int j=0;j<n;j++)
+using ll = long long;
+typedef long long ll;
+const int N = (int)2e5+5;
+vector<int>v[1005];
+const int cnt = 0;
+
+void solve()
+{
+
+   int n;
+   cin>>n;
+   string x;
+   cin>>x;
+   map<char,int>mp;
+   vector<int>v[260];
+
+   for(int i=0;i<x.size();i++){
+    mp[x[i]]++;
+   }
+   int cnt = 0;
+   for(auto i:mp){
+        int z = i.first - '0'-16;
+        if(i.second >= z){
+            cnt++;
+        }
+   }
+
+   cout<<cnt<<next;
+}
+
+int32_t main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL), cout.tie(NULL);
+    int t = 1;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
